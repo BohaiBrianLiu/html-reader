@@ -19,14 +19,18 @@
   "preconfiguredEntries": [
     {
       "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
-      "group": { "default": "Advanced" },
-      "title": { "default": "HTMLReader" },
-      "description": {
-        "default": "HTMLReader description"
+      "group": {
+        "default": "Advanced",
+        "zh_CN": "高级"
       },
-      "officeFabricIconFontName": "Page",
+      "title": { "default": "HTML Reader" },
+      "description": {
+        "default": "This web part allows you to paste HTML code. The possible XSS attack, caused by injecting HTML code containing Javascript script, has been handled, however please use this web part only when you fully trust the source.",
+        "zh_CN": "此组件允许您粘贴HTML源码并显示为页面。请您仅在代码来源完全可靠的情况下使用本组件。"
+      },
+      "officeFabricIconFontName": "FileCode",
       "properties": {
-        "htmlSourceCode": "<p>Click the edit button on the left to paste your HTML source code.</p>"
+        "htmlSourceCode": "<p>Click the edit button on the left to paste your HTML source code.</p>\n<p>请点击左侧编辑按钮打开粘贴界面。</p>"
       }
     }
   ]

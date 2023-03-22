@@ -4,4 +4,5 @@ export interface IHtmlReaderProps {
   environmentMessage: string;
   hasTeamsContext: boolean;
   userDisplayName: string;
+  htmlSourceCode: string;
 }

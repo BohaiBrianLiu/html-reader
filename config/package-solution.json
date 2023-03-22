@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "html-reader-client-side-solution",
+    "id": "bd3c39f0-90f2-415a-9acf-901ebc17a540",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.16.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "html-reader description"
+      },
+      "longDescription": {
+        "default": "html-reader description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "html-reader Feature",
+        "description": "The feature that activates elements of the html-reader solution.",
+        "id": "f18702d5-43f8-41aa-88f1-1ca1632c8abf",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/html-reader.sppkg"
+  }
+}

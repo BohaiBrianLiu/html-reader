@@ -8,4 +8,4 @@ This web part allows users to inject HTML DOM to SharePoint pages.
 ## Safety
 
 - Codes will be [purified](https://github.com/cure53/DOMPurify) to aviod potential XSS attacks.
-- ./config/serve.json file is excluded to aviod exposure of server entry point.
+- ./config/serve.json file is added to .gitignore to aviod exposure of server entry point.

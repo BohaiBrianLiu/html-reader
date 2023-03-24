@@ -17,6 +17,7 @@ export default class HtmlReader extends React.Component<
         className={`${styles.htmlReader} ${styles.teams}`}
       >
         <div
+          id="sp-html-reader"
           dangerouslySetInnerHTML={{
             __html: DOMPurify.sanitize(
               htmlSourceCode

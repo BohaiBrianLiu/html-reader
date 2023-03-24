@@ -2,12 +2,7 @@
 
 This web part allows users to inject HTML DOM to SharePoint pages.
 
----
-
-**Input field:**
 ![screen shot of input field](screen-shot-1.png)
-
-**Result:**
 ![screen shot of result](screen-shot-2.png)
 
 ## Safety

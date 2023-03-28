@@ -4,6 +4,8 @@ define([], function () {
       "This web part allows you to inject HTML code snippet into your SharePoint page. Please make sure your codes don't contain any JS scripts, or the web part will stop working until scripts are removed. The web part will also purify your code behind the scene, any tags outside of body will be automatically removed.",
     BasicGroupName: '---',
     DescriptionFieldLabel: 'Description Field',
+    ErrorMessage:
+      'Injecting scripts is dangerous hence forbidden. Please remove all scripts to continue.',
     AppLocalEnvironmentSharePoint:
       'The app is running on your local environment as SharePoint web part',
     AppLocalEnvironmentTeams:

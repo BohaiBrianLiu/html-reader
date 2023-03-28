@@ -53,7 +53,7 @@ export default class HtmlReaderWebPart extends BaseClientSideWebPart<IHtmlReader
     const regex =
       /<script[\s\S]*?>[\s\S]*?<\/script>/gi;
     if (regex.test(value)) {
-      return 'Dangers! Containing script tag. Please remove all scripts before submit.';
+      return 'Injecting scripts is dangerous hence forbidden. Please remove all scripts to continue.';
     }
     return '';
   }

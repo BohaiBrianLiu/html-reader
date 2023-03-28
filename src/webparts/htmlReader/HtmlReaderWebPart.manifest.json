@@ -25,7 +25,7 @@
       },
       "title": { "default": "HTML Reader Beta" },
       "description": {
-        "default": "This web part allows you to inject HTML code snippet into your SharePoint page. Please make sure your codes don't contain any JS scripts, or the web part will stop working until scripts are removed. The web part will also purify your code behind the scene, any tags outside of body will be automatically removed. \n If you encounter any problems, please contact brian.liu@keystoneacademy.cn.",
+        "default": "This web part allows you to inject HTML code snippet into your SharePoint page. Please make sure your codes don't contain any JS scripts, or the web part will stop working until scripts are removed. The web part will also purify your code behind the scene, any tags outside of body will be automatically removed.",
         "zh_CN": "此组件允许您粘贴HTML源码并显示为页面。如果您的源码中包含脚本，此组件会停止工作直到所有脚本都被删除。"
       },
       "officeFabricIconFontName": "FileCode",

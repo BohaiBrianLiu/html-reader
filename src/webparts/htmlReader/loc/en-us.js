@@ -1,7 +1,7 @@
 define([], function () {
   return {
     PropertyPaneDescription:
-      'This web part allows you to paste HTML code.\nThe possible XSS attack, caused by injecting HTML code containing Javascript script, has been handled, however please use this web part only when you fully trust the source.',
+      "This web part allows you to inject HTML code snippet into your SharePoint page. Please make sure your codes don't contain any JS scripts, or the web part will stop working until scripts are removed. The web part will also purify your code behind the scene, any tags outside of body will be automatically removed.",
     BasicGroupName: '---',
     DescriptionFieldLabel: 'Description Field',
     AppLocalEnvironmentSharePoint:

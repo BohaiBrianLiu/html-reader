@@ -5,7 +5,10 @@ import {
   IPropertyPaneConfiguration,
   PropertyPaneTextField,
 } from '@microsoft/sp-property-pane';
-import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
+import {
+  BaseClientSideWebPart,
+  IWebPartPropertiesMetadata,
+} from '@microsoft/sp-webpart-base';
 
 import * as strings from 'HtmlReaderWebPartStrings';
 import HtmlReader from './components/HtmlReader';
@@ -40,6 +43,21 @@ export default class HtmlReaderWebPart extends BaseClientSideWebPart<IHtmlReader
     return Version.parse('1.0');
   }
 
+  protected get propertiesMetadata(): IWebPartPropertiesMetadata {
+    return {
+      htmlSourceCode: { isHtmlString: true },
+    };
+  }
+
+  private validHtmlString(value: string): string {
+    const regex =
+      /<script[\s\S]*?>[\s\S]*?<\/script>/gi;
+    if (regex.test(value)) {
+      return 'Dangers! Containing script tag. Please remove all scripts before submit.';
+    }
+    return '';
+  }
+
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return {
       pages: [
@@ -50,13 +68,20 @@ export default class HtmlReaderWebPart extends BaseClientSideWebPart<IHtmlReader
           },
           groups: [
             {
-              groupName: strings.BasicGroupName,
+              groupName: '',
               groupFields: [
                 PropertyPaneTextField(
                   'htmlSourceCode',
                   {
                     label: 'HTML Source Code',
                     multiline: true,
+                    placeholder:
+                      'Add your HTML codes here.',
+                    deferredValidationTime: 100,
+                    onGetErrorMessage:
+                      this.validHtmlString.bind(
+                        this
+                      ),
                   }
                 ),
               ],

@@ -24,6 +24,12 @@ export default class HtmlReader extends React.Component<
             ),
           }}
         />
+        {/* <div
+          id="sp-html-reader"
+          dangerouslySetInnerHTML={{
+            __html: htmlSourceCode,
+          }}
+        /> */}
       </section>
     );
   }

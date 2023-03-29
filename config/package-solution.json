@@ -27,8 +27,8 @@
     },
     "features": [
       {
-        "title": "html-reader Feature",
-        "description": "The feature that activates elements of the html-reader solution.",
+        "title": "HTML Reader Feature",
+        "description": "Injecting HTML elements into SharePoint Page.",
         "id": "f18702d5-43f8-41aa-88f1-1ca1632c8abf",
         "version": "1.0.0.0"
       }

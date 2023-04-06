@@ -10,7 +10,9 @@ export default class HtmlReader extends React.Component<
   {}
 > {
   public render(): React.ReactElement<IHtmlReaderProps> {
-    const { htmlSourceCode } = this.props;
+    const __html = DOMPurify.sanitize(
+      this.props.htmlSourceCode
+    );
 
     return (
       <section
@@ -19,17 +21,9 @@ export default class HtmlReader extends React.Component<
         <div
           id="sp-html-reader"
           dangerouslySetInnerHTML={{
-            __html: DOMPurify.sanitize(
-              htmlSourceCode
-            ),
+            __html,
           }}
         />
-        {/* <div
-          id="sp-html-reader"
-          dangerouslySetInnerHTML={{
-            __html: htmlSourceCode,
-          }}
-        /> */}
       </section>
     );
   }
